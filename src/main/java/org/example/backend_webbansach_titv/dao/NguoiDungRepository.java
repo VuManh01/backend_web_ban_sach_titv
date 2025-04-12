@@ -8,8 +8,10 @@ import org.springframework.stereotype.Repository;
 
 @RepositoryRestResource(path = "nguoi-dung")
 public interface NguoiDungRepository extends JpaRepository<NguoiDung, Integer> {
+
     //kiem tra ten dang nhap da ton tai chua
     boolean existsByTenDangNhap(String tenDangNhap);
+
     //kiem tra email da ton tai chua
     boolean existsByEmail(String email);
 
